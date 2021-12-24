@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   php-apache-environment:
-    image: arinkistiaan/php
+    image: arinkistiaan/php-cicd
     container_name: php-apache
     depends_on:
       - db
