@@ -1,6 +1,6 @@
 version: '3.8'
 services:
-  php-apache-environtment:
+  php-apache-environment:
     image: arinkistiaan/php
     container_name: php-apache
     depends_on:
@@ -11,8 +11,8 @@ services:
       - 80:80
     networks:
       - backend
-    
-  db:
+  
+  db: 
     container_name: db
     image: mysql
     restart: always
@@ -23,7 +23,7 @@ services:
       - "3306:3306"
     volumes:
       - db:/var/lib/mysql
-      - ./hotel.sql:/docker-entrypoint-initdb.d/hotel.sql
+      - ./hotel.sql:/docker-entrypoint-intdb.d/hotel.sql
     networks:
       - backend
 
